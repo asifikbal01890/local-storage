@@ -1,12 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect} from 'react';
 import ProductCard from '../ProductCard/ProductCard';
 
 const Products = ({setProductsInfo, productsInfo}) => {
-
-const [addProducts, setAddProducts] = useState([])
-// console.log(addProducts);
-
-// console.log(productsInfo);
 
 
 useEffect(()=> {
@@ -16,7 +11,7 @@ useEffect(()=> {
 }, [])
 
 
-localStorage.setItem('productId', JSON.stringify(addProducts))
+
 
 
 
@@ -29,8 +24,6 @@ localStorage.setItem('productId', JSON.stringify(addProducts))
                 <ProductCard 
                 key={product.id} 
                 product={product}
-                addProducts={addProducts}
-                setAddProducts={setAddProducts}
                 ></ProductCard>)
             }
            </div>
