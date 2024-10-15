@@ -9,7 +9,6 @@ const ProductCard = ({ product }) => {
         // 1st step:  Retrieve the current list of product IDs from localStorage
         let getProducts = JSON.parse(localStorage.getItem('productId')) || [];
         const alreadyIn = getProducts.find(product => product === id)
-        console.log(alreadyIn);
 
         if (alreadyIn === undefined) {
             // 2nd step: Add the new ID to the array
